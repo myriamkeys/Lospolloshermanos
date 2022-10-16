@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Miriam_cortes">
+  <title>Los Pollos Hermanos</title>
+  <!-- CSS Style -->
+  <link rel="stylesheet" href="src/main.css">
+</head>
+
+<body id="body">
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <nav class="navbar" id="navbar">
+      <a class="brand" href=""><img src="src/assets/images/header/lph-logo.png" alt="Los Pollos Hermanos Logo"></a>
+
+      <input type="checkbox" id="nav" class="hidden">
+      <label for="nav" class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <div class="wrapper" id="menu-wrapper">
+        <ul id="menu-top-menu" class="menu">
+          <li class="menu-item">
+            <a href="?#Hero" aria-current="page" onclick="location.reload();">Home</a>
+          </li>
+          <li class="menu-item">
+            <a href="?#Info" aria-current="page" onclick="location.reload();">Info</a>
+          </li>
+          <li class="menu-item"><a href="?#Menu" onclick="location.reload();">Menu</a></li>
+          <li class="menu-item"><a href="?#Location" onclick="location.reload();">Location</a></li>
+
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+
+
+  <!-- MAIN -->
+  <div class="main-content">
+    <!-- Hero-->
+    <section class="hero" id="Hero">
+      <div class="hero-background">
+        <div class="hero-text">
+          <a href="#Menu">
+            <h1>Order <span>fried chicken </span> now</h1>
+            <p>Get famous chicken however you want it.</p>
+            <button class="btn btn-lg btn-primary">Order Now</button>
+          </a>
+        </div>
+        <div class="hero-background-overlay"></div><video class="hero-background-img" width="100%" height="100%" loop
+          autoplay>
+          <source src="src/assets/videos/hero-video.mp4" type="video/mp4">
+          <source src="src/assets/videos/hero-video.mp4.ogg" type="video/ogg">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+    <!-- // Hero-->
+    <div class="container">
+
+      <!-- Menu -->
+      <section class="menu" id="Menu">
+        <h2>Menu</h2>
+        <p>Menu varies by location. Please contact your local restaurant
+          to verify menu availability.</p>
+        <div class="menu-flex" id="content"></div>
+
+      </section>
+      <!-- // Menu-->
+    </div>
+    <div class="container-fluid location-fluid">
+
+      <!-- Location -->
+      <section class="location" id="Location">
+
+        <div class="location-flex">
+
+          <div class="container" id="Info">
+            <img src="src/assets/images/location/location-img.jpg" alt="">
+            <div class="location-text">
+              <h2>New Los Pollos Hermanos restaurant <span> in Madrid!</span></h2>
+              <p>The first establishment in Spain to incorporate the new
+                company image. The restaurants sporting the new image
+                have been warmly welcomed by the public, with growth
+                above 30% in those premises with the new Los Pollos
+                Hermanos identity.</p>
+              <p>Los Pollos Hermanos, flagship brand of Eat Out restoration
+                group, announced the opening its first restaurant in Madrid, at
+                <span>Puerta de Alcalá</span>.
+              </p>
+              <a href="https://www.google.com/maps/place/C.+de+Valenzuela,+4,+28014+Madrid/@40.4189232,-3.6896672,19z/data=!3m1!4b1!4m5!3m4!1s0xd42289b8d392581:0x32bfed1206105c2b!8m2!3d40.4189232!4d-3.68912"
+                target="_blank"><button class="btn btn-lg btn-secondary">Get directions</button></a>
+            </div>
+          </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d759.3863202510491!2d-3.6891200000000013!3d40.418923199999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42289b8d392581%3A0x32bfed1206105c2b!2sC.%20de%20Valenzuela%2C%204%2C%2028014%20Madrid!5e0!3m2!1ses!2ses!4v1664480018767!5m2!1ses!2ses"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+
+      </section>
+
+      <!-- // Location-->
+    </div>
+
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <!-- Partnership -->
+    <section id="Partnership" class="partnership container-fluid">
+
+      <div class="partnership-flex container">
+        <div>
+          <h3>In partnership with:</h3> <img src="src/assets/images/general/fever-logo.svg" alt="Logo Fever">
+        </div>
+        <div>
+          <h3>Event by:</h3> <img src="src/assets/images/header/lph-logo.png" alt="Logo Los Pollos Hermanos">
+        </div>
+      </div>
+    </section>
+    <!-- // Partnership-->
+    <div class="hero-background-overlay"></div>
+    <div class="footer-container container">
+      <p class="copyright">
+        ©
+        <script type="text/javascript">var year = new Date(); document.write(year.getFullYear());</script> LPH / Los
+        pollos hermanos. All Rights Reserved. Los
+        Pollos Hermanos is an original license. <a href="">Privacy policy</a>
+      </p>
+    </div>
+  </footer>
+  <!-- Do not edit below this line -->
+  <script type="module" src="./src/main.js"></script>
+  <!--  <script type="module" src="./src/script.js"></script>-->
+
+</body>
+
+</html>

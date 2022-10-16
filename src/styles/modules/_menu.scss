@@ -1,0 +1,88 @@
+.menu-flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 72px 0 0;
+    gap: 4rem 2rem;
+
+    & .menu-item {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: space-between;
+        width: 100%;
+
+        &:hover img{
+            transform: scale(1.1);
+        }
+
+        & .item-text{
+            width: 100%;
+        }
+    & .item-title{
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        
+    }
+        & h3 {
+            font-size: 18px;
+            margin-bottom: 6px;
+        }
+        & .prize{
+            font-weight: 700;
+            font-size: 16px;
+            background: $c-blue-primary;
+            color: white;
+            width: 54px;
+            height: 28px;
+            border-radius: 4px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+        & .description{
+            p{  font-size: 0.9rem; color:$c-grey;    width: 84%;}
+        }
+        & .image {
+            & img {
+                max-width: 142px;
+                height: 142px;
+                object-fit: cover;
+                border-radius: 100%;
+                transition: all .8s ease;
+
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+@media(min-width:768px){
+    .menu-flex{
+        & .menu-item {
+            flex-wrap: nowrap;
+    }
+}
+}
+
+@media(min-width:821px) {
+    .menu-flex {
+
+        & .menu-item {
+            flex: 0 0 46%;
+            width: 46%;
+            flex-wrap: nowrap;
+        }
+    }
+}
+
+section {
+
+    &.menu,
+    &.location {
+        width: 90%;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,247 @@
+
+header {
+    box-shadow: 0 0 0.625rem rgb(0 0 0 / 10%);
+    background: $c-white;
+    width: 100%;
+    z-index: 99;
+    position: fixed;
+    top:0;
+
+
+
+   & .navbar {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        flex-basis: auto;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 4rem;
+        margin: 0 auto;
+        position: relative;
+        z-index: 999;
+        max-width: 1090px;
+
+        & #nav{display: none;}
+        
+        &.fixed {
+            position: fixed;
+            top: 0;
+        }
+        & .brand img {
+            width: 62px;
+        }
+        & .menu {
+            display: flex;
+            flex-direction: row;
+            flex: 1;
+            flex-basis: auto;
+            justify-content: center;
+            align-items: center
+        }
+
+        & .menu-item{
+            list-style: none;
+            &:not(:first-child) {
+                margin-left: 2rem
+            }
+
+            & a {
+                font-family: $f-montserrat;
+                font-size: 0.9rem;
+                font-weight: 700;
+                line-height: inherit;
+                color: $c-white;
+                text-transform: uppercase;
+                text-decoration: none;
+                letter-spacing: 0.1rem;
+                
+                &:hover{
+                    color: $c-white-off;
+                }
+            }
+        }
+
+       
+    
+    }
+
+    &.fixed{
+        & .navbar{
+            & .menu-item{
+                & a{
+                    color: $c-dark;
+                }
+            }
+        }
+    }
+
+}
+
+.hide{
+    display: none;
+}
+
+
+@media only screen and (max-width:820px) {
+    .header-home {
+        height: 35vh
+    }
+
+    .header {
+       
+        & .navbar {
+            padding: 1.5rem 1.4rem;
+            margin: 0 auto;
+
+            & #nav{
+                &:checked+.nav-toggle {
+                    transform: rotate(45deg)
+                }
+            
+                &:checked+.nav-toggle span {
+                    background: #252a32;
+                    transition: transform .5s ease
+                }
+            
+                &:checked+.nav-toggle span:nth-child(1) {
+                    transform: translateY(6px) rotate(180deg)
+                }
+            
+                &:checked+.nav-toggle span:nth-child(2) {
+                    opacity: 0
+                }
+            
+                &:checked+.nav-toggle span:nth-child(3) {
+                    transform: translateY(-10px) rotate(90deg)
+                }
+            
+                &:checked~.wrapper {
+                    z-index: 99;
+                    opacity: 1;
+                    height: 100%
+                }
+            
+                &:checked~.wrapper .menu-item a {
+                    opacity: 1;
+                    transform: translateX(0)
+                }
+
+            }
+
+            & .nav-toggle {
+                display: block;
+                position: fixed;
+                right: 2.2rem;
+                width: 2.5rem;
+                height: 2.5rem;
+                cursor: pointer;
+                z-index: 999;
+
+                & span {
+                    display: block;
+                    width: 32px;
+                    height: 4px;
+                    background:$c-dark;
+                    border-radius: 2px;
+                    margin-left: 16px;
+
+                    &:nth-child(1) {
+                        margin-top: 16px
+                    }
+                
+                    &:nth-child(2) {
+                        margin-top: 4px;
+                        opacity: 1
+                    }
+                
+                    &:nth-child(3) {
+                        margin-top: 4px
+                    }
+                
+                }
+            }
+
+            & .wrapper {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 0;
+                z-index: -1;
+                opacity: 0;
+                background: #fcfcfc;
+                transition: all .3s ease;
+
+                & .menu {
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 42%;
+                    width: 100%;
+                    transform: translateY(-50%);
+                    
+                    & .menu-item {
+                        padding-bottom: 1rem;
+                        width: 100%;
+                        text-align: center;
+
+                        & a {
+                            padding: 1rem 2rem;
+                            opacity: 0;
+                            color: #252a32;
+                            font-size: 2rem;
+                            font-weight: 700;
+                            transform: translateX(-20px);
+                            transition: all .3s ease-in-out;
+
+                            &:hover{
+                                color:$c-white-off;
+                            }
+                        }
+                        &:nth-child(1) a {
+                            transition-delay: .2s
+                        }
+                    
+                        &:nth-child(2) a {
+                            transition-delay: .3s
+                        }
+                    
+                        &:nth-child(3) a {
+                            transition-delay: .4s
+                        }
+                    
+                        &:nth-child(4) a {
+                            transition-delay: .5s
+                        }
+                    
+                        &:not(:first-child) {
+                            margin-left: 0
+                        }
+                    }
+                }
+            }
+        }
+
+      
+    }
+
+}
+
+@media (min-width:820px){
+    .header{
+        background:transparent;
+        box-shadow: none;
+
+            & .navbar{
+                & .brand img {
+                    width: 100px
+                }
+            }
+    }
+
+    .header.fixed{
+        background-color: $c-white;
+    }
+
+}

@@ -1,0 +1,34 @@
+footer{
+    background:url(./assets/images/footer/footer-bg.jpg);
+    background-size: cover;
+    min-height: 20vh;
+    padding-bottom: 32px
+    ;
+
+    color:$c-white;
+    position: relative;
+
+    & .footer-container{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        z-index: 12;
+    }
+
+    & a{
+        font-weight: 700;
+        color: $c-white;
+    }
+    &    .hero-background-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 10;
+        background-color: rgb(7 24 33 / 78%);
+    }
+
+}
